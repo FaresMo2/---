@@ -4,19 +4,19 @@ import { FaYoutube, FaFacebook } from "react-icons/fa";
 function App() {
   const targetDate = "2020-11-27T22:40:00";
   return (
-    <div className="h-screen w-full relative flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center w-full h-screen overflow-hidden">
       <video
         loop
         autoPlay
         muted
-        className="w-full h-full object-cover lg:object-fill absolute"
+        className="absolute object-cover w-full h-full lg:object-fill"
       >
         <source src="/goal.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <img
-        className="md:hidden absolute right-10 top-10 z-20 w-10 "
+        className="absolute z-20 w-10 md:hidden right-10 top-10 "
         src="/ahly-logo.png"
         alt="ahly-logo"
       />
@@ -27,7 +27,7 @@ function App() {
       {/* Content on top of the video */}
       <CounterUpTimer targetDate={targetDate} />
 
-      <div className="relative z-30 mt-20 flex flex-col md:flex-row items-center gap-10">
+      <div className="relative z-30 flex flex-col items-center gap-10 mt-20 md:flex-row">
         <a
           href="https://www.facebook.com/alahly"
           target="_blank"
@@ -76,13 +76,13 @@ const CounterUpTimer = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="text-center relative z-50">
+    <div className="relative z-50 text-center">
       {/* Commented out the heading for a cleaner look */}
-      {/* <h1 className="text-4xl font-bold mb-4 text-white"> */}
+      {/* <h1 className="mb-4 text-4xl font-bold text-white"> */}
       {/*   27-11-2020 10:40pm الوقت من */}
       {/* </h1> */}
-      <div className="text-white p-4 md:p-6 rounded-lg inline-block">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+      <div className="inline-block p-4 text-white rounded-lg md:p-6">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
           <div className="flex flex-col items-center">
             <span className="text-4xl md:text-6xl">{timeElapsed.days}</span>
             <span>Days</span>
@@ -101,9 +101,9 @@ const CounterUpTimer = ({ targetDate }) => {
           </div>
         </div>
       </div>
-      <p className="text-xl md:text-2xl font-bold relative z-10 text-white">
+      <p className="relative px-5 text-lg font-bold text-white md:px-0 z-5 md:text-2xl">
         الجمعه ال{" "}
-        <span className="relative -mt-10 md:-mt-20 text-5xl md:text-7xl">
+        <span className="relative -mt-10 text-5xl md:-mt-20 md:text-7xl">
           201
         </span>{" "}
         علي القاضيه ممكن اعادها الله علينا وعليكم بالخير{" "}
