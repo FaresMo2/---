@@ -11,7 +11,7 @@ function App() {
         muted
         className="absolute object-cover w-full h-full lg:object-fill"
       >
-        <source src="/goal.mp4" type="video/mp4" />
+        <source src="/goal-afsha.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
